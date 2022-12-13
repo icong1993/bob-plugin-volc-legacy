@@ -1,0 +1,72 @@
+{
+  "name": "bob-plugin-deeplx",
+  "version": "0.1.0",
+  "author": "zcong1993",
+  "homepage": "https://github.com/zcong1993/bob-plugin-deeplx",
+  "repository": "https://github.com/zcong1993/bob-plugin-deeplx.git",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf build && rimraf release",
+    "build": "run-s clean && cross-env NODE_ENV=production rollup -c rollup.config.js",
+    "bundle": "cross-env NODE_ENV=production node scripts/bundle.js",
+    "bundle:watch": "cross-env NODE_ENV=development nodemon --watch build scripts/bundle.js",
+    "make-release": "run-s build bundle update-appcast",
+    "dev": "run-s clean && cross-env NODE_ENV=development rollup -c rollup.config.js --watch",
+    "type-check": "tsc --noEmit",
+    "update-appcast": "node scripts/update-appcast.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "pub": "np --no-publish --no-release-draft",
+    "version": "npm run changelog && git add ."
+  },
+  "dependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-angular": "^11.0.0",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-replace": "^2.3.4",
+    "@rollup/plugin-typescript": "^6.1.0",
+    "@types/adm-zip": "^0.4.33",
+    "@types/jsonfile": "^6.0.0",
+    "@types/node": "^12",
+    "@typescript-eslint/eslint-plugin": "^4.8.0",
+    "@typescript-eslint/parser": "^4.8.0",
+    "adm-zip": "^0.4.16",
+    "conventional-changelog-cli": "^2.1.1",
+    "cross-env": "^7.0.2",
+    "esbuild": "^0.7.22",
+    "eslint": "^7.13.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "form-data": "^3.0.0",
+    "fs-extra": "^9.0.1",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "nodemon": "^2.0.6",
+    "np": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "rollup": "^2.28.2",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "ts-node": "^9.0.0",
+    "tslib": "^2.0.3",
+    "type-fest": "^0.19.0",
+    "typescript": "^4.0.5"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "build/info.json"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -c .commitlintrc.json -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.ts": "eslint --ext .ts"
+  }
+}
