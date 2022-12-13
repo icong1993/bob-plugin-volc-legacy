@@ -5,15 +5,15 @@ const { promisify } = require('util')
 
 function generateInfo() {
   return {
-    identifier: 'dev.zcong1993.bob-plugin-deeplx',
+    identifier: 'dev.icong1993.bob-plugin-deeplx',
     category: 'translate',
     name: 'DeepL Translate',
     summary: '',
     icon: '115',
-    author: 'zcong1993',
-    homepage: 'https://github.com/zcong1993/bob-plugin-deeplx.git',
+    author: 'icong1993',
+    homepage: 'https://github.com/icong1993/bob-plugin-deeplx.git',
     appcast:
-      'https://github.com/zcong1993/bob-plugin-deeplx/raw/master/appcast.json',
+      'https://github.com/icong1993/bob-plugin-deeplx/raw/master/appcast.json',
     minBobVersion: '0.5.0',
     options: [
       {
