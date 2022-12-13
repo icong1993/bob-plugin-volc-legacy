@@ -1,5 +1,7 @@
 # bob-plugin-deeplx
 
+> fork from https://github.com/geekdada/bob-plugin-deepl-translate
+
 这是一个 [Bob](https://ripperhe.gitee.io/bob/#/) 使用的 DeepL 翻译插件。
 
 你需要部署一个 DeepL hack API server 才可以使用本插件。
