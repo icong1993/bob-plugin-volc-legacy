@@ -34,8 +34,8 @@ jobs:
 
       - name: Commit files
         run: |
-          git config --global user.name 'Roy Li'
-          git config --global user.email 'me@dada.li'
+          git config --global user.name 'zcong1993'
+          git config --global user.email 'zhangcong1992@gmail.com'
           git commit -am "chore: update appcast.json"
 
       - name: Push changes
@@ -47,4 +47,4 @@ jobs:
         with:
           artifacts: 'release/*.bobplugin'
           token: ${{ secrets.GITHUB_TOKEN }}
-          draft: true
+          draft: false
