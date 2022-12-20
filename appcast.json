@@ -1,4 +1,12 @@
 {
   "identifier": "dev.icong1993.bob-plugin-volc-legacy",
-  "versions": []
+  "versions": [
+    {
+      "version": "0.1.0",
+      "desc": "https://github.com/icong1993/bob-plugin-volc-legacy/releases/tag/v0.1.0",
+      "sha256": "94fec757f481ae0e3fbf501db7e169ebd4b06ab7b5b40749ea1eb11c62fbdaa4",
+      "url": "https://github.com/icong1993/bob-plugin-volc-legacy/releases/download/v0.1.0/bob-plugin-volc-legacy.bobplugin",
+      "minBobVersion": "0.5.0"
+    }
+  ]
 }
