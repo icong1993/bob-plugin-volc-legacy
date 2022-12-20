@@ -4,10 +4,10 @@ const crypto = require('crypto')
 
 const pkg = require('../package.json')
 const plugAppcast = require('../appcast.json')
-const githubRelease = `https://github.com/icong1993/bob-plugin-deeplx/releases/download`
+const githubRelease = `https://github.com/icong1993/bob-plugin-volc-legacy/releases/download`
 
 function main() {
-  const pkgName = 'bob-plugin-deeplx'
+  const pkgName = 'bob-plugin-volc-legacy'
   const pkgPath = path.join(__dirname, `../release/${pkgName}.bobplugin`)
   const appcastPath = path.join(__dirname, '../appcast.json')
 
@@ -19,7 +19,7 @@ function main() {
   const version = {
     version: pkg.version,
     desc:
-      'https://github.com/icong1993/bob-plugin-deeplx/releases/tag/v' +
+      'https://github.com/icong1993/bob-plugin-volc-legacy/releases/tag/v' +
       pkg.version,
     sha256: hex,
     url: `${githubRelease}/v${pkg.version}/${pkgName}.bobplugin`,
@@ -39,7 +39,7 @@ function main() {
   }
 
   const appcastData = {
-    identifier: 'dev.icong1993.bob-plugin-deeplx',
+    identifier: 'dev.icong1993.bob-plugin-volc-legacy',
     versions,
   }
 

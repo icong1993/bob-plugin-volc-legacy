@@ -5,15 +5,15 @@ const { promisify } = require('util')
 
 function generateInfo() {
   return {
-    identifier: 'dev.icong1993.bob-plugin-deeplx',
+    identifier: 'dev.icong1993.bob-plugin-volc-legacy',
     category: 'translate',
-    name: 'DeepL Translate',
+    name: 'Volc Translate Legacy',
     summary: '',
-    icon: '115',
+    icon: '120',
     author: 'icong1993',
-    homepage: 'https://github.com/icong1993/bob-plugin-deeplx.git',
+    homepage: 'https://github.com/icong1993/bob-plugin-volc-legacy.git',
     appcast:
-      'https://github.com/icong1993/bob-plugin-deeplx/raw/master/appcast.json',
+      'https://github.com/icong1993/bob-plugin-volc-legacy/raw/master/appcast.json',
     minBobVersion: '0.5.0',
     options: [
       {
@@ -42,7 +42,7 @@ function generateInfo() {
 }
 
 async function main() {
-  const pkgName = 'bob-plugin-deeplx'
+  const pkgName = 'bob-plugin-volc-legacy'
   const version = require('../package.json').version
   const buildDir = join(__dirname, '../build')
   const releaseDir = join(__dirname, '../release')

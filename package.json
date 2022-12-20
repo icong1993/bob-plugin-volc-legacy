@@ -1,9 +1,9 @@
 {
-  "name": "bob-plugin-deeplx",
+  "name": "bob-plugin-volc-legacy",
   "version": "0.1.0",
   "author": "icong1993",
-  "homepage": "https://github.com/icong1993/bob-plugin-deeplx",
-  "repository": "https://github.com/icong1993/bob-plugin-deeplx.git",
+  "homepage": "https://github.com/icong1993/bob-plugin-volc-legacy",
+  "repository": "https://github.com/icong1993/bob-plugin-volc-legacy.git",
   "license": "MIT",
   "private": true,
   "scripts": {

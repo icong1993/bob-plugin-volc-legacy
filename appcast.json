@@ -1,12 +1,4 @@
 {
-  "identifier": "dev.icong1993.bob-plugin-deeplx",
-  "versions": [
-    {
-      "version": "0.1.0",
-      "desc": "https://github.com/icong1993/bob-plugin-deeplx/releases/tag/v0.1.0",
-      "sha256": "e9b891e8288998a7a759b2f72328d445cfcec70f4c7641121d70f120e12b9b50",
-      "url": "https://github.com/icong1993/bob-plugin-deeplx/releases/download/v0.1.0/bob-plugin-deeplx.bobplugin",
-      "minBobVersion": "0.5.0"
-    }
-  ]
+  "identifier": "dev.icong1993.bob-plugin-volc-legacy",
+  "versions": []
 }
